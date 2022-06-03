@@ -42,7 +42,7 @@ INSTALLED_APPS = ['adminapp','btech','mca','mba','basicscience',
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -119,8 +119,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT=posixpath.join(*(str(BASE_DIR.resolve(os.path.sep))+'/static')) 
-# MEDIA_ROOT=os.path.join(BASE_DIR,'img')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'media_root')
+MEDIA_ROOT=os.path.join(BASE_DIR,'img')
 MEDIA_URL='/img/'
 
 EMAIL_HOST='smtp.gmail.com'
