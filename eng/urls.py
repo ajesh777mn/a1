@@ -22,7 +22,8 @@ from mba.views import *
 from basicscience.views import *
 from django.urls import re_path
 from django.conf.urls.static import static 
-
+from django.views.static import serve
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -147,7 +148,8 @@ urlpatterns = [
                             re_path(r'^online_appl/$',online_appl,name='online_appl'),
                             re_path(r'^mandatory_discl/$',mandatory_discl,name='mandatory_discl'),
 
-
+ re_path(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    re_path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 
 
 
