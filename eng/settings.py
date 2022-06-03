@@ -119,7 +119,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT=posixpath.join(*(str(BASE_DIR.resolve(os.path.sep))+'/static')) 
-MEDIA_ROOT=os.path.join(BASE_DIR,'img')
+# MEDIA_ROOT=os.path.join(BASE_DIR,'img')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'media_root')
 MEDIA_URL='/img/'
 
 EMAIL_HOST='smtp.gmail.com'
