@@ -20,7 +20,7 @@ from btech.views import *
 from mca.views import *
 from mba.views import *
 from basicscience.views import *
-from django.urls import re_path
+from django.urls import path  #repath
 from django.conf.urls.static import static 
 from django.views.static import serve
 from django.conf.urls.static import static
